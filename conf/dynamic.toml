@@ -1,0 +1,16 @@
+[tls.stores]
+  [tls.stores.default]
+    [tls.stores.default.defaultCertificate]
+    certFile = "/opt/traefik/certs/localcert.crt"
+    keyFile = "/opt/traefik/certs/localcert.key"
+
+[[tls.certificates]]
+  certFile = "/opt/traefik/certs/localcert.crt"
+  keyFile = "/opt/traefik/certs/localcert.key"
+  stores = ["default"]
+
+[http]
+    [http.middlewares]
+      [http.middlewares.to-https]
+         [http.middlewares.to-https.redirectScheme]
+            scheme = "https"
