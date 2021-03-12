@@ -10,6 +10,12 @@
     address = ":80"
   [entryPoints.https]
     address = ":443"
+  [entryPoints.tcp-mysql-8]
+    address = ":3333"
+  [entryPoints.tcp-mysql-5-7]
+    address = ":3334"
+  [entryPoints.factorio]
+    address = ":34197/udp"
 
 [providers]
   [providers.file]
